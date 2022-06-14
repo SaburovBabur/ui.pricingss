@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
+
+$textColor:#141843;
+$freeBtnColor:#EDBBFF;
+$standartBtnColor:#AEF1F5;
+$premiumBtnColor:#FFDDB6;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #E5E5E5;
+    .purple-color{
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        left: -330px;
+        top: 200px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(237, 187, 255, 0.6) 0%, rgba(237, 187, 255, 0) 100%);
+    }
+    .cyan-color{
+        position: absolute;
+        width: 528px;
+        height: 528px;
+        left: 396px;
+        top: -318px;
+        background: radial-gradient(50% 50% at 50% 50%, #C6FCFF 0%, rgba(198, 252, 255, 0) 100%);
+    }
+    .pink-color{
+        position: absolute;
+        width: 624px;
+        height: 624px;
+        left: 1053px;
+        top: -169px;
+        background: radial-gradient(50% 50% at 50% 50%, #FFDDB6 0%, rgba(255, 221, 182, 0) 100%);
+    }
+}
+
+.tariff-card{
+    display: flex;
+    gap: 40px;
+    background: hsl(0, 100%, 99%);
+    border: 20px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 80px;
+    position: relative;
+    .tariff-card__free{
+        h1{
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 33px;
+            color: $textColor;
+            margin-bottom: 10px;
+        }
+
+        .price-number{
+            display: flex;
+            align-items: center;
+            h3{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 47px;
+                color: $textColor;
+                margin-right: 5px;
+                font-family: 'IBM Plex Sans';
+            }
+
+            h1{
+                font-style: normal;
+                font-weight: 700;
+                font-size: 62px;
+                line-height: 81px;
+                color: $textColor;
+            }
+        }
+
+        .short-text{
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: $textColor;
+            margin-bottom: 40px;
+        }
+
+        .long-text{
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            width: 276px;
+            height: 52px;
+            color: $textColor;
+            margin-bottom: 50px;
+        }
+        button{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 144px;
+            height: 66px;
+            background-color: $freeBtnColor;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            border: none;
+        }
+        
+    } 
+
+    .tariff-card__standart{
+        @extend .tariff-card__free;
+        button{
+            background-color: $standartBtnColor;
+            font-size: 16px;
+        }
+    }
+
+    .tariff-card__premium{
+        @extend .tariff-card__free;
+        button{
+            background-color: $premiumBtnColor;
+        }
+    }
+}
